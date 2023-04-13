@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="register.css">
-    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Rentr Register</title>
 </head>
 <body>
 
     
 
     <form class="regi">
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-        <input type="email" placeholder="Email">
-        <button onclick="document.location='login.html'">register</button>
+        <input v-model="addUser.name" type="text" placeholder="Username">
+        <input v-model="addUser.password" type="password" placeholder="Password">
+        
+        <button v-on:click="addUsers()">register</button>
       </form>
+
+
+
+      <script src="register.js"></script>
     
 </body>
 </html>
